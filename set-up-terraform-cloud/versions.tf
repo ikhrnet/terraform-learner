@@ -10,7 +10,7 @@ terraform {
 
   backend "remote" {
     hostname     = "app.terraform.io"
-    # organization = "Input your organization name and uncomment this line"
+    # organization = "Your organization name"
 
     workspaces {
       name = "set-up-terraform-cloud"
