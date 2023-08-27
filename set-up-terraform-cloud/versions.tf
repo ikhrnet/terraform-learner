@@ -1,0 +1,19 @@
+terraform {
+  required_version = "~> 1.5"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.14"
+    }
+  }
+
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    # organization = "Input your organization name and uncomment this line"
+
+    workspaces {
+      name = "set-up-terraform-cloud"
+    }
+  }
+}
